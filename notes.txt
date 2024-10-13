@@ -1,0 +1,25 @@
+what is spring-boot-starter-parent?
+when you are building a project, in your pom.xml file you inherits the spring-boot-starter-parent 
+and it is a .xml file that represents the parent pom of your current project and it includes BOM (Bill of Material) file 
+which is called spring-boot-dependencies and it includes the versions of dependencies that you will use in your current project.
+also the parent POM includs the configurations of  java compiler and UTF source encoding.
+
+
+what is the spring boot application?
+it is an application that is build using springboot framework which is an enhancement or a framework that is 
+built on the springcore framework for enterprise level applications.
+enhancements includes pre-configured settings and automatic configurations.
+
+what is the difference between jar and war?
+both of are application packaging format but 
+1. .jar file : contains all the application with its all configurations and dependencies and also 
+an embedded application Server (likely tomcat) that our spring boot application runs on it direclty without the need to deploy it on an external application server.
+2. .war file : contains all the application with its all configurations and dependencies but it needs an application server to run 
+    our spring boot application on it.
+
+what is the meaning of @springbootapplication annotation that we put it on the main class?
+it is a composite annotation that contains inside it three annotations:
+1. @configuration : we put it on the class to declare that this class can be used by the spring IOC container as a source of bean definitions. you can define beans in this class
+2. @EnableAutoConfiguration : instructs the spring boot to configure the application based on the dependencies on the classpath
+3. @ComponentScan : scan the beans, find them and register them.
+
