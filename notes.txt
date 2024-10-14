@@ -10,6 +10,7 @@ it is an application that is build using springboot framework which is an enhanc
 built on the springcore framework for enterprise level applications.
 enhancements includes pre-configured settings and automatic configurations.
 
+
 what is the difference between jar and war?
 both of are application packaging format but 
 1. .jar file : contains all the application with its all configurations and dependencies and also 
@@ -17,9 +18,32 @@ an embedded application Server (likely tomcat) that our spring boot application 
 2. .war file : contains all the application with its all configurations and dependencies but it needs an application server to run 
     our spring boot application on it.
 
+
+what is the meaning of <scope>provided</scope> of a dependency?
+provided:
+Dependencies are needed at compile time but are provided by the runtime environment (e.g., a servlet API in a web container like Tomcat).
+It is not included in the final build artifact (JAR, WAR, etc.), as it is assumed to be present in the runtime environment.
+
+
 what is the meaning of @springbootapplication annotation that we put it on the main class?
 it is a composite annotation that contains inside it three annotations:
 1. @configuration : we put it on the class to declare that this class can be used by the spring IOC container as a source of bean definitions. you can define beans in this class
 2. @EnableAutoConfiguration : instructs the spring boot to configure the application based on the dependencies on the classpath
 3. @ComponentScan : scan the beans, find them and register them.
+
+
+what is the meaning of a componenet in my application is in the classpath?
+the classpath refers to the location that the java runtime looks for compiled classes and resources 
+needed to run the application.
+
+
+what is @RestController?
+we use it on the class name to to make this class a web service which means its methods 
+responds to the http requests with response body.
+
+what is the meaning of exposing the endpoint?
+to make it remotly accessible over http.
+
+when the endpoint becomes available?
+when the endpoint is configured to be both enabled and exposed 
 

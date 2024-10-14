@@ -11,7 +11,7 @@ public class HelloController {
     // @PostMapping("/hello")
     @RequestMapping("/hello") 
     public String sayHello() {
-        return "Hello To Spring Boot! From Haroun.";
+        return "Hello, Sprig Boot Community, Lab2!";
     }
 }
 
